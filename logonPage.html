@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Logon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Digite seu nome para começar!</h2>
+            <input type="text" id="name" placeholder="Nome">
+            <div class="inptLine"></div>
+            <button id="post" onclick="isText()">Ok</button>
+            <p id="p0"></p>
+        </div>
+    </div>
+
+    <script>
+            let button = document.querySelector('button');
+            let inptString
+            let nameUser
+            let message
+         
+            //verifica se o usuario deixou o campo vazio!
+            function isText() {
+                inptString = document.querySelector('#name');
+                nameUser = inptString.value;
+
+                if (nameUser === "") {
+                alert("digite seu nome primeiro")
+                }
+                else {
+                    pushTxt()
+                    addUser()
+                }
+            }
+
+            //pega o valor do input name
+            function pushTxt() {
+                inptString = document.querySelector('#name');
+                nameUser = inptString.value;
+
+                message = "e ae " + nameUser + "!";
+                setTimeout(function() {
+                    window.location.href = "userRegistrado.html";
+        }, 1500);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            }
+
+            function addUser() {
+                inptString = document.querySelector('#name');
+                nameUser = inptString.value;
+                console.log(user)
+            }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<!--ter um lugar para escrever meu nome
+    receber esse dado e alocar em algum lugar
+    ler esse dado
+    exibir junto a uma mensagem
+-->
